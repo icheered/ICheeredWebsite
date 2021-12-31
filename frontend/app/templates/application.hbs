@@ -1,35 +1,8 @@
 
 {{page-title "Frontend"}}
-<div class="flex flex-col h-screen bg-bgwhite font-body">
-    <div class="flex flex-col h-1/2">
+<div class="dark"> <!-- Set dark mode -->
+    <div class="flex flex-col h-screen bg-bgwhite dark:bg-black font-body">
         <Topbar/>
-        <Hero/>
-    </div>
-    
-    <div class="flex flex-row pr-3 pl-3 h-1/2">
-        <Image 
-            @img="electronics.jpeg" 
-            @alt="An electronic circuit board" 
-            @title="Hardware" 
-            @position="left-bottom">
-                Bachelor degree from university of Twente
-        </Image>
-        <Image 
-            @img="code.jpeg" 
-            @alt="Code on screen" 
-            @title="Software" 
-            @position="center-bottom">
-                Years of experience programming in multiple languages
-        </Image>
-        <Image 
-            @img="3dprinter.jpeg" 
-            @alt="A 3D printer" 
-            @title="3D-printing" 
-            @position="right-bottom">
-                I make custom 3D models that I can print for u
-            </Image>
-        {{!-- <Image @img="camera.jpg" @alt="A digital camera" @text="Photography" @position="center-bottom"/> --}}
+    {{outlet}} 
     </div>
 </div>
-
-{{outlet}}
