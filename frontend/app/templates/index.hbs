@@ -1,37 +1,27 @@
 {{page-title "Main"}}
-<div class="w-full h-full">
+<div class="overflow-y-auto overflow-x-hidden w-full h-full scrollbar">
     <div class="flex flex-row h-2/5">
-        <Hero/>
+        <Hero />
     </div>
-        
-    <div class="flex flex-row flex-initial px-3 pt-8 h-3/5">
-        <Image 
-            @img="electronics.jpeg" 
-            @alt="An electronic circuit board" 
-            @title="Electronics" 
-            @position="left-bottom">
-                Bachelor degree in Electrical Engineering from university of Twente.
+
+    <div class="flex flex-col flex-initial items-center px-3 pt-48 h-3/5 md:flex-row md:pt-8">
+        <Image @img="electronics.jpeg" @alt="An electronic circuit board" @title="Electronics" @position="left-bottom">
+            Bachelor degree in Electrical Engineering from university of Twente.
         </Image>
-        <Image 
-            @img="code.jpeg" 
-            @alt="Code on screen" 
-            @title="Software" 
-            @position="center-bottom">
-                Years of experience programming in multiple languages and frameworks for front-end, back-end, application, machine learning, and mobile!
-                <ul class="list-disc text-left">
-                    <li>Backend/Application/ML: Python (FastAPI, Matplotlib, Tensorflow, PyGame)</li>
-                    <li>Embedded: C, C++, MicroPython</li>
-                    <li>Frontend: HTML/CSS/JS (VueJS, EmberJS, TailwindCSS)</li>
-                    <li>Mobile: React Native, Flutter</li>
-                </ul>
+        <Image @img="code.jpeg" @alt="Code on screen" @title="Software" @position="center-bottom">
+            Years of experience programming in multiple languages and frameworks for front-end, back-end, application,
+            machine learning, and mobile!
+            <ul class="list-disc text-left">
+                <li>Backend/Application/ML: Python (FastAPI, Matplotlib, Tensorflow, PyGame)</li>
+                <li>Embedded: C, C++, MicroPython</li>
+                <li>Frontend: HTML/CSS/JS (VueJS, EmberJS, TailwindCSS)</li>
+                <li>Mobile: React Native, Flutter</li>
+            </ul>
         </Image>
-        <Image 
-            @img="3dprinter.jpeg" 
-            @alt="A 3D printer" 
-            @title="3D-printing" 
-            @position="right-bottom">
-                Experienced in creating custom 3D models to solve any problem. I also tinker a lot with my 3D printer to bring these models to life!
-            </Image>
+        <Image @img="3dprinter.jpeg" @alt="A 3D printer" @title="3D-printing" @position="right-bottom">
+            Experienced in creating custom 3D models to solve any problem. I also tinker a lot with my 3D printer to
+            bring these models to life!
+        </Image>
     </div>
 </div>
 {{outlet}}

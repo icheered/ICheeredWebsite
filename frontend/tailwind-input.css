@@ -5,5 +5,27 @@
 @layer components {
     .doanimation {
         @apply transition-all duration-500 ease-in-out;
-      }
-  }
+    }
+}
+
+@layer utilities {
+    .scrollbar::-webkit-scrollbar {
+        width: 12px;
+        height: 20px;
+    }
+
+    .scrollbar::-webkit-scrollbar-track {
+        border-radius: 100vh;
+        background: #000000;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+        background: #000000;
+        border-radius: 100vh;
+        border: 2px solid #f6f7ed;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #ff0000;
+    }
+}
