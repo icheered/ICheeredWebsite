@@ -1,0 +1,10 @@
+<button class="w-6 h-6 md:w-14 md:h-14  m-2 {{if (eq activeView scrollto) ' text-black' ' text-gray-300'}}" {{on "click"
+    (fn move-view scrollto)}}>
+    <div class="invisible md:visible">
+        <i class="fas fa-{{icon}} fa-lg"></i>
+    </div>
+    <div class="visible md:invisible">
+        <i class="fas fa-{{icon}} fa-sm"></i>
+    </div>
+
+</button>

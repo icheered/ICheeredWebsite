@@ -1,8 +1,70 @@
+{{page-title "ICheered"}}
 
-{{page-title "Frontend"}}
-<div class="dark"> <!-- Set dark mode -->
-    <div class="flex flex-col h-screen bg-bgwhite dark:bg-black font-body">
-        <Topbar/>
-    {{outlet}} 
-    </div>
+<div class="">
+    <Topbar />
+</div>
+
+
+<div class="absolute h-screen flex flex-col items-center justify-center">
+    <ScrollButton @scrollto="1" @move-view={{this.moveView}} @activeView={{this.activeView}} @icon="asterisk">
+    </ScrollButton>
+    <ScrollButton @scrollto="2" @move-view={{this.moveView}} @activeView={{this.activeView}} @icon="user">
+    </ScrollButton>
+    <ScrollButton @scrollto="3" @move-view={{this.moveView}} @activeView={{this.activeView}} @icon="code">
+    </ScrollButton>
+    <ScrollButton @scrollto="4" @move-view={{this.moveView}} @activeView={{this.activeView}} @icon="microchip">
+    </ScrollButton>
+    <ScrollButton @scrollto="5" @move-view={{this.moveView}} @activeView={{this.activeView}} @icon="camera">
+    </ScrollButton>
+    <ScrollButton @scrollto="6" @move-view={{this.moveView}} @activeView={{this.activeView}} @icon="print">
+    </ScrollButton>
+    <ScrollButton @scrollto="7" @move-view={{this.moveView}} @activeView={{this.activeView}} @icon="address-card">
+    </ScrollButton>
+</div>
+
+
+
+<div class="snap-y snap-mandatory h-screen w-screen overflow-scroll no-scrollbar overflow-x-hidden" {{on "scroll"
+    this.setActiveViewOnScroll}}>
+    <ScrollView @div_id="1" class="bg-bgwhite">
+        <Hero @move-view={{this.moveView}}></Hero>
+    </ScrollView>
+    <ScrollView @div_id="2" class="bg-blue-600">
+
+        <div class="flex flex-col items-center">
+            <div class="h-20 w-full bg-bgwhite">
+
+            </div>
+            <div class="w-screen">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path fill="#F1F1F1"
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+            <div class="w-full h-full flex justify-center items-center">
+                test 2
+            </div>
+
+            <div class="w-screen h-24">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
+                </svg>
+            </div>
+
+        </div>
+
+
+    </ScrollView>
+    <ScrollView @div_id="3" class="bg-black">
+        <div class="flex flex-col items-center">
+
+
+            <div class="w-full h-full flex justify-center items-center text-white">
+                test 3
+            </div>
+        </div>
+    </ScrollView>
 </div>

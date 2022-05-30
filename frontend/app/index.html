@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Frontend</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{content-for "head"}}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Frontend</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/frontend.css">
-    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
-    <link href="tailwind.css" rel="stylesheet">
+  {{content-for "head"}}
 
-    {{content-for "head-footer"}}
-  </head>
-  <body scroll="no" style="overflow: hidden">
-    {{content-for "body"}}
+  <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+  <link integrity="" rel="stylesheet" href="{{rootURL}}assets/frontend.css">
+  <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+  <link href="tailwind.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 
-    <script src="{{rootURL}}assets/vendor.js"></script>
-    <script src="{{rootURL}}assets/frontend.js"></script>
+  {{content-for "head-footer"}}
+</head>
 
-    {{content-for "body-footer"}}
-  </body>
+<body scroll="no" style="overflow: hidden">
+  {{content-for "body"}}
+
+  <script src="{{rootURL}}assets/vendor.js"></script>
+  <script src="{{rootURL}}assets/frontend.js"></script>
+
+  {{content-for "body-footer"}}
+</body>
+
 </html>

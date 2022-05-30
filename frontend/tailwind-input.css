@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
 @layer components {
     .doanimation {
         @apply transition-all duration-500 ease-in-out;
@@ -27,5 +30,17 @@
 
     .scrollbar::-webkit-scrollbar-thumb:hover {
         background: #ff0000;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
     }
 }

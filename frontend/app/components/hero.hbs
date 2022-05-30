@@ -1,13 +1,18 @@
-<div class="flex flex-col w-full h-full md:flex-row">
-    <div class="flex flex-initial justify-center m-auto w-2/3 h-full">
-        <img src="TestFace.png" alt="My face" class="flex object-scale-down h-full">
-    </div>
-    <div class="flex flex-col items-center m-auto w-full">
-        <div class="flex flex-row text-2xl">
-            <p class="w-28 text-5xl text-black dark:text-white">
-                I am:
-            </p>
+<div class="flex flex-col w-full md:pl-10">
+    <div class="w-full flex flex-col items-center md:flex-row h-full ">
+        <div class="w-full md:w-1/2 flex justify-center items-start md:h-4/5 h-1/2">
+            <img src="PersonStockphoto.jpg" alt="My face" class="object-scale-down md:h-full grayscale">
+        </div>
+
+        <div class="text-5xl text-black text-center w-32 md:h-[12.8rem]">
+            I am:
+        </div>
+        <div class="w-full md:w-1/2 ">
             <Scroller />
         </div>
+    </div>
+
+    <div class="h-10 flex justify-center items-center cursor-pointer" {{on "click" (fn @move-view 2)}}>
+        <i class="fas fa-arrow-down animate-bounce pb-36 md:pb-22"></i>
     </div>
 </div>

@@ -432,6 +432,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-scale-x: 1;
   --tw-scale-y: 1;
   --tw-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-scroll-snap-strictness: proximity;
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
   --tw-blur: var(--tw-empty,/*!*/ /*!*/);
@@ -452,6 +453,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.visible {
+  visibility: visible;
+}
+
 .invisible {
   visibility: hidden;
 }
@@ -468,16 +473,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 0px;
 }
 
-.m-auto {
-  margin: auto;
-}
-
 .m-3 {
   margin: 0.75rem;
 }
 
-.m-4 {
-  margin: 1rem;
+.m-2 {
+  margin: 0.5rem;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .mt-\[2\.8rem\] {
@@ -496,24 +502,36 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100%;
 }
 
+.h-1\/2 {
+  height: 50%;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
 .h-24 {
   height: 6rem;
 }
 
-.h-\[8\.8rem\] {
-  height: 8.8rem;
-}
-
-.h-\[6rem\] {
-  height: 6rem;
-}
-
-.h-20 {
-  height: 5rem;
+.h-6 {
+  height: 1.5rem;
 }
 
 .h-screen {
   height: 100vh;
+}
+
+.h-\[12\.8rem\] {
+  height: 12.8rem;
+}
+
+.h-\[10rem\] {
+  height: 10rem;
+}
+
+.h-14 {
+  height: 3.5rem;
 }
 
 .h-2\/5 {
@@ -524,24 +542,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 60%;
 }
 
+.h-16 {
+  height: 4rem;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
 .w-full {
   width: 100%;
 }
 
-.w-2\/3 {
-  width: 66.666667%;
-}
-
-.w-28 {
-  width: 7rem;
+.w-32 {
+  width: 8rem;
 }
 
 .w-1\/2 {
   width: 50%;
 }
 
-.w-96 {
-  width: 24rem;
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-screen {
+  width: 100vw;
 }
 
 .flex-initial {
@@ -558,9 +584,42 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: var(--tw-transform);
 }
 
+@-webkit-keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce {
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
+}
+
 @-webkit-keyframes slide {
   from {
-    top: -18rem;
+    top: -26rem;
   }
 
   to {
@@ -570,7 +629,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 @keyframes slide {
   from {
-    top: -18rem;
+    top: -26rem;
   }
 
   to {
@@ -581,6 +640,27 @@ Ensure the default browser behavior of the `hidden` attribute.
 .animate-slide {
   -webkit-animation: slide 3s ease-in-out;
           animation: slide 3s ease-in-out;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.snap-y {
+  -ms-scroll-snap-type: y var(--tw-scroll-snap-strictness);
+      scroll-snap-type: y var(--tw-scroll-snap-strictness);
+}
+
+.snap-mandatory {
+  --tw-scroll-snap-strictness: mandatory;
+}
+
+.snap-start {
+  scroll-snap-align: start;
+}
+
+.snap-always {
+  scroll-snap-stop: always;
 }
 
 .list-disc {
@@ -599,6 +679,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   place-items: center;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
 .items-center {
   align-items: center;
 }
@@ -609,6 +693,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-scroll {
+  overflow: scroll;
 }
 
 .overflow-y-auto {
@@ -639,6 +727,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-bgwhite {
   --tw-bg-opacity: 1;
   background-color: rgb(241 241 241 / var(--tw-bg-opacity));
+}
+
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.bg-green-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-b {
@@ -679,16 +782,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.75rem;
 }
 
+.pb-36 {
+  padding-bottom: 9rem;
+}
+
 .pl-3 {
   padding-left: 0.75rem;
 }
 
 .pr-5 {
   padding-right: 1.25rem;
-}
-
-.pt-32 {
-  padding-top: 8rem;
 }
 
 .pt-48 {
@@ -703,15 +806,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }
 
-.font-body {
-  font-family: Manrope;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -722,9 +816,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.25rem;
 }
 
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .font-extralight {
@@ -745,12 +849,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
 .opacity-50 {
   opacity: 0.5;
 }
 
 .opacity-0 {
   opacity: 0;
+}
+
+.grayscale {
+  --tw-grayscale: grayscale(100%);
+  filter: var(--tw-filter);
 }
 
 .duration-700 {
@@ -775,6 +889,19 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .scrollbar::-webkit-scrollbar-thumb:hover {
   background: #ff0000;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .hover\:w-3\/4:hover {
@@ -819,11 +946,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   filter: var(--tw-filter);
 }
 
-.dark .dark\:border-white {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
 .dark .dark\:bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -844,15 +966,59 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 768px) {
+  .md\:visible {
+    visibility: visible;
+  }
+
+  .md\:invisible {
+    visibility: hidden;
+  }
+
+  .md\:h-4\/5 {
+    height: 80%;
+  }
+
+  .md\:h-full {
+    height: 100%;
+  }
+
+  .md\:h-\[12\.8rem\] {
+    height: 12.8rem;
+  }
+
+  .md\:h-14 {
+    height: 3.5rem;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
   .md\:w-1\/3 {
     width: 33.333333%;
+  }
+
+  .md\:w-14 {
+    width: 3.5rem;
+  }
+
+  .md\:w-96 {
+    width: 24rem;
   }
 
   .md\:flex-row {
     flex-direction: row;
   }
 
+  .md\:pl-10 {
+    padding-left: 2.5rem;
+  }
+
   .md\:pt-8 {
     padding-top: 2rem;
+  }
+
+  .md\:text-left {
+    text-align: left;
   }
 }

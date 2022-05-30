@@ -16,7 +16,7 @@ module.exports = {
       },
       keyframes: {
         slide: {
-          from: { top: '-18rem' },
+          from: { top: '-26rem' },
           to: { top: '0rem' },
         },
       },
