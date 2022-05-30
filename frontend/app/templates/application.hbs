@@ -25,12 +25,13 @@
 
 <div class="bg-bgwhite snap-y snap-mandatory h-screen w-screen overflow-scroll no-scrollbar overflow-x-hidden scroll-auto"
     {{on "scroll" this.setActiveViewOnScroll}}>
+
     <ScrollView @div_id="1" class="bg-bgwhite ">
-        <div class="flex flex-col">
+        <div class="flex flex-col h-">
             <div class="h-full w-screen">
-                <Hero @move-view={{this.moveView}}></Hero>
+                <Hero @move-view={{this.moveView}} class="h-full"></Hero>
             </div>
-            <div>
+            <div class="w-screen">
                 <div class="custom-shape-divider-bottom-1653910826 w-screen">
                     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                         preserveAspectRatio="none">
