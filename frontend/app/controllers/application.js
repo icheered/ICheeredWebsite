@@ -8,6 +8,13 @@ export default class ApplicationController extends Controller {
     @tracked activeView = "1";
     @tracked largestIntersectionValue = 1;
 
+    // For the map at the contacts page
+    lat = 52.24012363662337;
+    lng = 6.84969282922526;
+    zoom = 5;
+    hotel = [52.24012363662337, 6.84969282922526];
+    mapurl = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png";
+
     @action
     moveView(number) {
         var element = document.getElementById("div" + String(number));

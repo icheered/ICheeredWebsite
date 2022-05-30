@@ -1,0 +1,17 @@
+.contact {
+    font-family: "Montserrat", sans-serif;
+    padding-left: 10rem;
+    padding-top: 3rem;
+    margin: 0 auto;
+    float: left;
+}
+
+.contact li {
+    list-style-type: none;
+    padding-bottom: 3rem;
+}
+
+.contactsvg {
+    width: 50px;
+    margin-bottom: -1rem;
+}
