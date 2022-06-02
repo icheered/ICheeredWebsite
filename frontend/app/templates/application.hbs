@@ -7,7 +7,7 @@
 
 
 
-<div class="absolute h-screen flex flex-col items-center justify-center w-10 ">
+<div class="absolute hscreen-mobile flex flex-col items-center justify-center w-10 ">
     <ScrollButton @scrollto="1" @move-view={{this.moveView}} @activeView={{this.activeView}} @icon="asterisk">
     </ScrollButton>
     <ScrollButton @scrollto="2" @move-view={{this.moveView}} @activeView={{this.activeView}} @icon="terminal">
@@ -22,7 +22,7 @@
     </ScrollButton>
 </div>
 
-<div class="bg-bgwhite snap-y snap-mandatory h-screen w-screen overflow-scroll no-scrollbar overflow-x-hidden scroll-auto"
+<div class="bg-bgwhite h-screen snap-y snap-mandatory w-screen overflow-scroll no-scrollbar overflow-x-hidden scroll-auto"
     {{on "scroll" this.setActiveViewOnScroll}}>
 
     <ScrollView @div_id="1" class="bg-bgwhite ">

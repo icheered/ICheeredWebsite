@@ -695,6 +695,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   cursor: pointer;
 }
 
+.resize {
+  resize: both;
+}
+
 .snap-y {
   -ms-scroll-snap-type: y var(--tw-scroll-snap-strictness);
       scroll-snap-type: y var(--tw-scroll-snap-strictness);
@@ -1042,6 +1046,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 0;
     visibility: visible;
   }
+}
+
+.hscreen-mobile {
+  /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 .no-scrollbar::-webkit-scrollbar {

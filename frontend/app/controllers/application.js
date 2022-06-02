@@ -16,11 +16,13 @@ export default class ApplicationController extends Controller {
     mapurl = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png";
 
     @action
-    didInsertElement() {
-        console.log("here")
-        Ember.$(window).on('load', console.log("Here"));
+    init() {
 
-
+        // Set VW height dynamic if browser omnibar is shown on mobile
+        // If not done, the screen won't show the shapes at bottoms
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        super.init(...arguments);
     }
 
     @action
