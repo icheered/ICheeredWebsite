@@ -1,9 +1,10 @@
 {{page-title "ICheered"}}
 
 
-<div class="">
+<div>
     <Topbar @move-view={{this.moveView}} />
 </div>
+
 
 
 <div class="absolute h-screen flex flex-col items-center justify-center w-10 ">
@@ -20,8 +21,6 @@
     <ScrollButton @scrollto="6" @move-view={{this.moveView}} @activeView={{this.activeView}} @icon="address-card">
     </ScrollButton>
 </div>
-
-
 
 <div class="bg-bgwhite snap-y snap-mandatory h-screen w-screen overflow-scroll no-scrollbar overflow-x-hidden scroll-auto"
     {{on "scroll" this.setActiveViewOnScroll}}>
@@ -184,6 +183,13 @@
                         @text="Tjeerd Bakker" />
                     <Contact @icon="fab fa-github" @link="https://github.com/icheered" @text="ICheered" />
                 </div>
+                <button class="rounded-full text-2xl bg-blue-900 text-white mt-8 p-2">
+                    <a class="text-md" href="ResumeTjeerdBakker.pdf" download="ResumeTjeerdBakker.pdf">
+                        <i class="fas fa-download"></i> Download Resume - PDF</a>
+                </button>
+
+
+
             </div>
 
             <LeafletMap class="w-full h-full m-10" @lat={{this.lat}} @lng={{this.lng}} @zoom={{this.zoom}} as |layers|>
