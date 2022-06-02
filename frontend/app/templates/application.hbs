@@ -28,8 +28,10 @@
 
     <ScrollView @div_id="1" class="bg-bgwhite ">
         <div class="flex flex-col justify-center">
-            <div class="h-full 2xl:h-[90%] w-screen ">
+            <div class="h-full 2xl:h-[90%] w-screen px-10">
                 <Hero @move-view={{this.moveView}} class="h-full "></Hero>
+
+
             </div>
             <div class="w-screen 2xl:h-full 2xl:flex 2xl:justify-end">
                 <div class="custom-shape-divider-bottom-1653910826 w-screen">
@@ -51,7 +53,7 @@
     </ScrollView>
 
 
-    <ScrollView @div_id="2" class="bg-blue-600">
+    <ScrollView @div_id="2" class="bg-slate-900">
         <div class="flex flex-col items-center">
             <ScrollViewContent @title="Software" class="h-full">
                 <:customicon>
@@ -71,7 +73,7 @@
             <div class="w-screen h-18">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                     preserveAspectRatio="none">
-                    <path fill="#111827" d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill">
+                    <path fill="#2563EB" d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill">
                     </path>
                 </svg>
             </div>
@@ -80,7 +82,7 @@
     </ScrollView>
 
 
-    <ScrollView @div_id="3" class="bg-slate-900">
+    <ScrollView @div_id="3" class="bg-blue-600">
         <div class="flex flex-col ">
             <div class="h-full w-screen">
                 <ScrollViewContent @title="Electrical Engineering" class="h-full">
@@ -170,37 +172,17 @@
 
 
     <ScrollView @div_id="6" class="bg-bgwhite">
-        <div class="flex flex-col items-center w-max ">
+        <div class="flex flex-col items-center w-full px-20 pt-10">
             <div class="w-full h-1/3 flex justify-center items-end text-black pt-20">
                 Contact
             </div>
 
             <div class="w-full h-2/3 flex flex-col items-center">
                 <div class="flex flex-col justify-start items-start  h-full pt-10 ">
-                    <div class="flex flex-row items-center">
-                        <i class="fas fa-envelope text-6xl md:text-8xl pr-6 w-20 md:w-36"></i>
-                        <a href="mailto:tjeerd992@gmail.com" target="_blank">
-                            <p class="text-2xl md:text-5xl text-blue-900 underline underline-offset-2 decoration-2">
-                                Tjeerd992@gmail.com
-                            </p>
-                        </a>
-                    </div>
-
-                    <div class="flex flex-row items-center">
-                        <i class="fab fa-linkedin text-6xl md:text-8xl pr-6 w-20 md:w-36"></i>
-                        <a href="https://www.linkedin.com/in/tjeerd-bakker-4abbb3178/" target="_blank">
-                            <p class="text-2xl md:text-5xl text-blue-900 underline underline-offset-2 decoration-2">
-                                Tjeerd Bakker</p>
-                        </a>
-                    </div>
-
-                    <div class="flex flex-row items-center">
-                        <i class="fab fa-github text-6xl md:text-8xl pr-6 w-20 md:w-36"></i>
-                        <a href="https://github.com/icheered" target="_blank">
-                            <p class="text-2xl md:text-5xl text-blue-900 underline underline-offset-2 decoration-2">
-                                ICheered</p>
-                        </a>
-                    </div>
+                    <Contact @icon="fas fa-envelope" @link="mailto:tjeerd992@gmail.com" @text="Tjeerd992@gmail.com" />
+                    <Contact @icon="fab fa-linkedin" @link="https://www.linkedin.com/in/tjeerd-bakker-4abbb3178/"
+                        @text="Tjeerd Bakker" />
+                    <Contact @icon="fab fa-github" @link="https://github.com/icheered" @text="ICheered" />
                 </div>
             </div>
 

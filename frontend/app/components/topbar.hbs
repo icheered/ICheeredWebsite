@@ -1,11 +1,14 @@
 <div class="flex absolute w-full h-14 z-30">
-    <div class="flex justify-center items-center pl-3 text-2xl font-semibold text-slate-700">
-        Tjeerd Bakker
-    </div>
+    <button {{on "click" (fn @move-view 1)}}>
+        <div class="flex justify-center items-center pl-3 text-2xl font-semibold text-slate-700">
+            Tjeerd Bakker
+        </div>
+    </button>
+
 
     <div class="flex grow " />
 
     <div class="flex flex-row pr-5 right text-slate-700">
-        <Link @move-view={{@move-view}} @text="Contact" @border="true" />
+        <Link @move-view={{@move-view}} @text="Hire me!" @border="true" />
     </div>
 </div>

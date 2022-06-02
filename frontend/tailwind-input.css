@@ -27,6 +27,35 @@
 }
 
 @layer utilities {
+
+    #hideMe {
+        -moz-animation: cssAnimation 0s ease-in 5s forwards;
+        /* Firefox */
+        -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+        /* Safari and Chrome */
+        -o-animation: cssAnimation 0s ease-in 5s forwards;
+        /* Opera */
+        animation: cssAnimation 0s ease-in 1s forwards;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes cssAnimation {
+        to {
+            width: 0;
+            height: 0;
+            overflow: visible;
+        }
+    }
+
+    @-webkit-keyframes cssAnimation {
+        to {
+            width: 0;
+            height: 0;
+            visibility: visible;
+        }
+    }
+
     .scrollbar::-webkit-scrollbar {
         width: 12px;
         height: 20px;
@@ -87,7 +116,7 @@
     }
 
     .custom-shape-divider-bottom-1653910826 .shape-fill {
-        fill: #2563EB;
+        fill: #0f172a;
     }
 
     .custom-shape-divider-bottom-1653911226 {

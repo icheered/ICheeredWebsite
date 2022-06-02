@@ -16,6 +16,14 @@ export default class ApplicationController extends Controller {
     mapurl = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png";
 
     @action
+    didInsertElement() {
+        console.log("here")
+        Ember.$(window).on('load', console.log("Here"));
+
+
+    }
+
+    @action
     moveView(number) {
         var element = document.getElementById("div" + String(number));
         element.scrollIntoView({ behavior: "smooth" });
