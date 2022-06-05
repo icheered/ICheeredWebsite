@@ -25,7 +25,7 @@
 <div class="bg-bgwhite h-screen snap-y snap-mandatory w-screen overflow-scroll no-scrollbar overflow-x-hidden scroll-auto"
     {{on "scroll" this.setActiveViewOnScroll}}>
 
-    <ScrollView @div_id="1" class="bg-bgwhite ">
+    <ScrollView @div_id="1" class="bg-bgwhite">
         <div class="flex flex-col justify-center">
             <div class="h-full 2xl:h-[90%] w-screen px-10">
                 <Hero @move-view={{this.moveView}} class="h-full "></Hero>
@@ -169,25 +169,16 @@
 
 
     <ScrollView @div_id="6" class="bg-bgwhite">
-        <div class="flex flex-col items-center w-full px-20 pt-10">
-            <div class="w-full h-1/3 flex justify-center items-end text-black pt-20">
+        <div class="flex flex-col items-center w-full px-10 md:px-20 pt-10 ">
+            <div class="w-full flex justify-center items-end text-black pt-20">
                 Contact
             </div>
 
-            <div class="w-full h-2/3 flex flex-col items-center">
-                <div class="flex flex-col justify-start items-start  h-full pt-10 ">
-                    <Contact @icon="fas fa-envelope" @link="mailto:tjeerd992@gmail.com" @text="Tjeerd992@gmail.com" />
-                    <Contact @icon="fab fa-linkedin" @link="https://www.linkedin.com/in/tjeerd-bakker-4abbb3178/"
-                        @text="Tjeerd Bakker" />
-                    <Contact @icon="fab fa-github" @link="https://github.com/icheered" @text="ICheered" />
-                </div>
-                <button class="rounded-full text-2xl bg-blue-900 text-white mt-8 p-2">
-                    <a class="text-md" href="ResumeTjeerdBakker.pdf" download="ResumeTjeerdBakker.pdf">
-                        <i class="fas fa-download"></i> Download Resume - PDF</a>
-                </button>
-
-
-
+            <div class="w-full flex flex-row items-center justify-center text-2xl  ">
+                <Contact @icon="fas fa-envelope" @link="mailto:tjeerd992@gmail.com" />
+                <Contact @icon="fab fa-linkedin" @link="https://www.linkedin.com/in/tjeerd-bakker-4abbb3178/" />
+                <Contact @icon="fab fa-github" @link="https://github.com/icheered" />
+                <Contact @icon="fab fa-instagram" @link="https://www.instagram.com/i.cheered/" />
             </div>
 
             <LeafletMap class="w-full h-full m-10" @lat={{this.lat}} @lng={{this.lng}} @zoom={{this.zoom}} as |layers|>

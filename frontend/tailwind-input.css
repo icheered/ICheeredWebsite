@@ -28,7 +28,16 @@
 
 @layer utilities {
 
+    /*On safari, the textgradientpink doesn't work, set to black for now*/
+    _::-webkit-full-page-media,
+    _:future,
+    :root .safariclass {
 
+        @apply text-black
+    }
+
+
+    /* Keep arrow on first page hidden for first 5 seconds */
     #hideMe {
         -moz-animation: cssAnimation 0s ease-in 5s forwards;
         /* Firefox */
